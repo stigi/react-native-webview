@@ -927,6 +927,7 @@ static NSDictionary* customCertificatesForHost;
       @"domain": error.domain,
       @"code": @(error.code),
       @"description": error.localizedDescription,
+      @"url": [[error.userInfo valueForKey:NSURLErrorFailingURLErrorKey] description],
     }];
     _onLoadingError(event);
   }
